@@ -23,7 +23,14 @@ one Python file, so it can be easily copied into your project if you
 don't want to use pypi. (The copyright and license notice must be
 retained.)
 
-At the bottom of the ledgrid.py file are some examples of usage.
+At the bottom of the ledgrid.py file are some examples of usage. You
+can run these examples using::
+
+    python3 -m ledgrid
+
+Or if you have the file locally::
+
+    python3 ledgrid.py
 
 Many thanks to Richard Hayler. The LED class, graphics, etc are based
 on his `8x8GridDraw`_.
