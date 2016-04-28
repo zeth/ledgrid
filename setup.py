@@ -29,5 +29,5 @@ setup(name="ledgrid",
       license="BSD",
       classifiers=ledgrid_classifiers,
       url = 'https://github.com/zeth/ledgrid', # use the URL to the github repo
-      download_url = 'https://github.com/zeth/ledgrid/tarball/0.1',
+      #download_url = 'https://github.com/zeth/ledgrid/tarball/0.1',
 )
