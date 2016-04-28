@@ -1,14 +1,14 @@
-An 8x8 grid of virtual LEDs implemented in Pygame
-
 The ledgrid module contains a single LEDGrid class which aims to be as
 identical as possible to the public interface of the Raspberry Pi
 Sense HAT library, such that it is useful in mocking up software for
 it and other such devices.
 
-Many existing Sense HAT LED demos and software will work using the
-following import statement:
+.. image:: ledgrid-screenshot.png
 
-from ledgrid import LEDGrid as SenseHat
+Many existing Sense HAT LED demos and software will work using the
+following import statement::
+
+    from ledgrid import LEDGrid as SenseHat
 
 However, the internal implementation is rather simplified and uses
 pygame instead of the hardware HAT.
