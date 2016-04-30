@@ -64,6 +64,15 @@ import time
 import base64
 import io
 
+# Use SDL2 Pygame if available, SD1 if not.
+try:
+    import pygame_sdl2
+except ImportError:
+    SDL = 1
+else:
+    pygame_sdl2.import_as_pygame()
+    SDL = 2
+
 import pygame
 # Optional image support
 try:
