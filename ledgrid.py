@@ -92,9 +92,11 @@ class LEDGrid(object):
     def __init__(self,
                  black_is_colour=False,
                  screen=None,
-                 title=None):
+                 title=None,
+                 margins=None):
         self._black_is_colour = black_is_colour
         self._title = title or "LED Grid"
+        self._margins = margins or (10, 10)
         self._rotation = 0
         self._leds = []  # The LED matrix
         self._pixels = [OFF] * 64  # The list of pixels
@@ -105,6 +107,8 @@ class LEDGrid(object):
             self._setup_basic_screen()
         else:
             self._setup_leds()
+            self._draw_leds()
+
         self._text_dict = {}
         if Image:
             self._load_text_assets()
@@ -190,6 +194,8 @@ class LEDGrid(object):
 
         if self._basic:
             self._draw_basic_screen()
+        else:
+            self._draw_leds()
 
     def get_pixels(self):
         """
@@ -236,6 +242,8 @@ class LEDGrid(object):
 
         if self._basic:
             self._draw_basic_screen()
+        else:
+            self._draw_leds()
 
     def get_pixel(self, x_pos, y_pos):
         """Returns a list of [R,G,B] representing the pixel specified by
@@ -401,6 +409,7 @@ class LEDGrid(object):
             for row in range(0, 8):
                 led = LED(radius=20,
                           pos=(rank, row),
+                          margins=self._margins,
                           black_is_colour=self._black_is_colour,
                           screen=self._screen)
                 self._leds.append(led)
