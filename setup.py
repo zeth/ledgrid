@@ -5,8 +5,6 @@ try:
 except ImportError:
     from distutils.core import setup
 
-import ledgrid
-
 ledgrid_classifiers = [
     "Programming Language :: Python :: 2.7",
     "Programming Language :: Python :: 3",
@@ -21,7 +19,7 @@ with open("README.rst", "r") as fp:
 
 setup(name="ledgrid",
       description = 'An 8x8 grid of virtual LEDs implemented in Pygame.',
-      version=ledgrid.__version__,
+      version=0.3,
       author="Zeth",
       author_email="theology@gmail.com",
       py_modules=["ledgrid"],
