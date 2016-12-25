@@ -19,10 +19,13 @@ with open("README.rst", "r") as fp:
 
 setup(name="ledgrid",
       description = 'An 8x8 grid of virtual LEDs implemented in Pygame.',
-      version=0.3,
+      version=0.4,
       author="Zeth",
       author_email="theology@gmail.com",
       py_modules=["ledgrid"],
+      install_requires=[
+          'pygame'
+      ],
       long_description=ledgrid_long_description,
       license="BSD",
       classifiers=ledgrid_classifiers,
